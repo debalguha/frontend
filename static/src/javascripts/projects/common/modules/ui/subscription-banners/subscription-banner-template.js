@@ -13,10 +13,10 @@ const subscriptionBannerTemplate = (
     signInUrl: string,
     userLoggedIn: boolean
 ): string => `
-<div id="js-subscription-banner-site-message" class="site-message--subscription-banner">
+<div id="js-site-message--subscription-banner" class="site-message--subscription-banner">
     <div class="site-message--subscription-banner__inner">
         <h3 class="site-message--subscription-banner__title">
-            A beautiful way to read it <br /> A powerful way to fund it
+            A beautiful way to read it <br> A powerful way to fund it
         </h3>
 
         <div class="site-message--subscription-banner__description">
@@ -54,9 +54,9 @@ const subscriptionBannerTemplate = (
         )}"
         >
             <p>Already a subscriber?</p>
-            <br class="temp-mobile-break" />
+            <br class="temp-mobile-break">
             <a
-                id="site-message--subscription-banner__sign-in"
+                id="js-site-message--subscription-banner__sign-in"
                 class="site-message--subscription-banner__subscriber-link"
                 data-link-name="subscription-banner : sign in"
                 href="${signInUrl}"
@@ -96,7 +96,8 @@ const bannerTemplate = (
     signInUrl: string,
     userLoggedIn: boolean
 ): string =>
-    `<div class="site-message js-site-message js-double-site-message site-message--banner site-message--double-banner subscription-banner--holder"
+    `<div class="site-message js-site-message js-double-site-message site-message--banner site-message--double-banner"
+          id="js-site-message--subscription-banner__holder"
           tabindex="-1"
           role="dialog"
           aria-label="welcome"
